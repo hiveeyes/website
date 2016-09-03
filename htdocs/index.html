@@ -18,6 +18,7 @@
 
     <meta content='#A5ECFD' name='theme-color'/>
     <!-- <link rel='shortcut icon' href='./favicon.ico'/> -->
+    <link rel='stylesheet' href='./assets/css/bootstrap.min.css'>
     <link rel='stylesheet' href='./assets/css/main.css'>
     <link rel='canonical' href='https://www.hiveeyes.org/'>
     <script>
@@ -29,7 +30,7 @@
     <span id="title">
         <h1 class="headline">The Hiveeyes Project</h1>
         <h2 class="slogan">
-            Open source, DIY, self-hosted beehive monitoring kit based
+            Open source, DIY, self-hosted beehive monitoring toolkit based
             <br/>
             on modern technologies (MQTT, InfluxDB, Grafana, mqttwarn)
             <br/>
@@ -38,18 +39,19 @@
     </span>
 </div>
 <ul class="nav">
-    <li>
-        <a href="https://hiveeyes.org/docs/system/">About</a>
+    <li class="container-fluid">
+        <div class="row">
+            <div class="col-xs-3 bullet-point">
+                About
+            </div>
+            <div class="col-xs-9 more-links">
+                <a data-toggle="modal" data-target="#intro-modal" role="button" class="btn btn-outline-success btn-lg">Quick intro</a>
+                <a data-toggle="modal" data-target="#contact-modal" role="button" class="btn btn-outline-success btn-lg">Contact</a>
+            </div>
+        </div>
+
         <!-- TODO: About, Project, Goals, Team, Gallery -->
-    </li>
-    <li>
-        <a href="https://hiveeyes.org/docs/system/">Documentation</a>
-        <!-- TODO: Arduino, BERadio, Kotori -->
-        <!--
-        <a href="https://hiveeyes.org/docs/arduino/">Arduino</a>
-        <a href="https://hiveeyes.org/docs/beradio/">BERadio</a>
-        <a href="https://getkotori.org/">Kotori</a>
-        -->
+        <!-- TODO: Seed: http://www.mauergarten.net/2014/09/5226/ -->
     </li>
     <li>
         <a href="https://trac.hiveeyes.org/blog">Blog <span class="font-small">(German)</span></a>
@@ -60,6 +62,19 @@
     <li>
         <a href="https://hiveeyes.org/docs/system/history.html">Chronicle</a>
     </li>
+    <li class="container-fluid">
+        <div class="row">
+            <div class="col-xs-3 bullet-point">
+                Documentation
+            </div>
+            <div class="col-xs-9 more-links">
+                <a href="https://hiveeyes.org/docs/system/" class="btn btn-outline-success btn-lg">Main system</a>
+                <a href="https://hiveeyes.org/docs/arduino/" class="btn btn-outline-success btn-lg">Arduino firmware</a>
+                <a href="https://hiveeyes.org/docs/beradio/" class="btn btn-outline-success btn-lg">BERadio protocol/gateway</a>
+                <a href="https://getkotori.org/" class="btn btn-outline-success btn-lg">Kotori backend</a>
+            </div>
+        </div>
+    </li>
     <li>
         <a href="https://swarm.hiveeyes.org/grafana/dashboard/db/hiveeyes-labs-wedding?from=20160416&to=20160601">Explore measurements</a>
         <!-- TODO: Grafana -->
@@ -68,9 +83,124 @@
         -->
     </li>
 
-    <!-- TODO: Gallery -->
-    <!-- TODO: Software (Download), Hardware -->
+    <!-- TODO: Gallery, Contact -->
+    <!-- TODO: Software (Download), Hardware, Firmware -->
 
 </ul>
+
+
+<div id="intro-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="intro-modal-label" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="intro-modal-label">Hiveeyes in a nutshell</h4>
+            </div>
+            <div class="modal-body">
+
+                <h3 class="text-muted">
+                    Who are you?
+                </h3>
+                <p>
+                    We are a group of beekeepers from Berlin regularly meeting on wednesdays since 2014 to build a
+                    collaborative telemetry platform for beehive monitoring.
+                    We are Karsten, Robert, Clemens, Richard, Martin, Andreas and Dazz.
+                    <br/>
+                    Feel welcome to <a href="mailto:hello@hiveeyes.org">join us</a>.
+                </p>
+
+                <h3 class="text-muted">
+                    What is it?
+                </h3>
+                <p>
+                    Hiveeyes is an open source, DIY toolkit for building beehive monitoring setups.
+                    It is modular and built upon contemporary technologies
+                    and components like Arduino, MQTT, InfluxDB and Grafana.
+                    With low-cost, low-power hardware, we aim at making non-invasive beekeeping as
+                    affordable and comfortable as possible.
+                    <br/>
+                    The backend systems do not require any 3rd-party services to work. While available as
+                    a hosted system running on our shared platform "swarm.hiveeyes.org",
+                    it also works self-contained even on a RaspberryPi or similar System-on-A-Chip computer.
+                </p>
+
+                <h3 class="text-muted">
+                    How is it going?
+                </h3>
+                <p>
+                    After a while of planning and discussions in 2014 and reusing previous efforts of the founding
+                    team members, we finally entered the main designing and building phase in 2015/2016.
+                    <br/>
+                    We are now at a point where we nailed the components of the system and open sourced
+                    all major software artifacts required to run the whole stack, from embedded firmware
+                    to backend systems.
+                    The source code is on <a href="https://github.com/hiveeyes">GitHub</a>,
+                    so we are happy to share our efforts completely with the community and
+                    look forward to the next development iterations, now completely in the
+                    open.
+
+                </p>
+
+                <h3 class="text-muted">
+                    And now?
+                </h3>
+                <p>
+                    Beginning autumn 2016, we will reiterate on different aspects of the software-
+                    and hardware-components, decide about which hardware route to follow and
+                    hopefully will start producing some small batches.
+                    <br/>
+                    We will also put some efforts into a scientific project we were asked to
+                    collaborate with and always look forward to your feedback. There are many
+                    bits and pieces to look at and require more intensive testing.
+                    <a href="mailto:hello@hiveeyes.org">We need you!</a>
+                    <br/>
+                    For further details, please see the projects’
+                    <a href="https://hiveeyes.org/docs/system/goals.html">goals</a> and stay with us.
+                    <br/>
+                    <br/>
+                    Happy beekeeping!
+
+                </p>
+
+                -- The Hiveeyes Team.
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="contact-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="contact-modal-label" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="contact-modal-label">Contact the Hiveeyes project</h4>
+            </div>
+            <div class="modal-body">
+
+                <h3 class="text-muted">
+                    How to get in touch?
+                </h3>
+                <p>
+                    Our primary internal and external way of communicating is email.
+                    <br/><br/>
+                    Please reach out to us at &nbsp; <a href="mailto:hello@hiveeyes.org?subject=Hello%20Hiveeyes" class="font-large">hello@hiveeyes.org</a>.
+                </p>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="./assets/js/jquery.min.js"></script>
+<script src="./assets/js/tether.min.js"></script>
+<script src="./assets/js/bootstrap.min.js"></script>
+
 </body>
 </html>
