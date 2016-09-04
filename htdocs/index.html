@@ -23,6 +23,19 @@
     <link rel='canonical' href='https://www.hiveeyes.org/'>
     <script>
     </script>
+    <!--
+    TODO:
+    Sections/content for
+    - [x] About, Contact, Project, Goals
+    - [x] Team, License, Gallery, In the press
+    - [o] At a glance / Overview, Other projects
+    - [o] Features (extended Gallery), Foundation, system components, mqttwarn & mcu contrib
+    - [o] DIY: BOM, Install, Software (Download), Hardware, Firmware
+    - [o] Seed: http://www.mauergarten.net/2014/09/5226/
+    - [o] Polish system docs
+    - [o] Kick overlays again
+
+    -->
 </head>
 <body>
 <div id="main">
@@ -30,12 +43,13 @@
     <span id="title">
         <h1 class="headline">The Hiveeyes Project</h1>
         <h2 class="slogan">
-            Open source, DIY, self-hosted beehive monitoring toolkit based
+            A flexible beehive monitoring infrastructure platform and toolkit
             <br/>
-            on modern technologies (MQTT, InfluxDB, Grafana, mqttwarn)
-            <br/>
-            and wireless telemetry (RF69, LoRa, GSM, WiFi).
+            based on modern software, affordable hardware and wireless telemetry.
         </h2>
+        <div class="slogan-more">
+            <a data-toggle="modal" data-target="#tech-modal" role="button" class="btn btn-outline-success">Read more...</a>
+        </div>
     </span>
 </div>
 <ul class="nav">
@@ -45,22 +59,36 @@
                 About
             </div>
             <div class="col-xs-9 more-links">
-                <a data-toggle="modal" data-target="#intro-modal" role="button" class="btn btn-outline-success btn-lg">Quick intro</a>
+                <a data-toggle="modal" data-target="#intro-modal" role="button" class="btn btn-outline-success btn-lg">Introduction</a>
+                <a data-toggle="modal" data-target="#gallery-modal" role="button" class="btn btn-outline-success btn-lg">Gallery</a>
                 <a data-toggle="modal" data-target="#contact-modal" role="button" class="btn btn-outline-success btn-lg">Contact</a>
+
             </div>
         </div>
-
-        <!-- TODO: About, Project, Goals, Team, Gallery -->
-        <!-- TODO: Seed: http://www.mauergarten.net/2014/09/5226/ -->
     </li>
-    <li>
-        <a href="https://trac.hiveeyes.org/blog">Blog <span class="font-small">(German)</span></a>
+    <li class="container-fluid">
+        <div class="row">
+            <div class="col-xs-3 bullet-point">
+                Project
+            </div>
+            <div class="col-xs-9 more-links">
+                <a href="https://trac.hiveeyes.org/blog" class="btn btn-outline-success btn-lg">Blog <span class="font-smaller">(German)</span></a>
+                <a href="https://hiveeyes.org/docs/system/history.html" class="btn btn-outline-success btn-lg">Chronicle</a>
+                <a data-toggle="modal" data-target="#press-modal" role="button" class="btn btn-outline-success btn-lg">In the press</a>
+                <a href="https://hiveeyes.org/docs/system/people.html" class="btn btn-outline-success btn-lg">Team</a>
+            </div>
+        </div>
     </li>
-    <li>
-        <a href="https://github.com/hiveeyes">GitHub</a>
-    </li>
-    <li>
-        <a href="https://hiveeyes.org/docs/system/history.html">Chronicle</a>
+    <li class="container-fluid">
+        <div class="row">
+            <div class="col-xs-3 bullet-point">
+                Development
+            </div>
+            <div class="col-xs-9 more-links">
+                <a href="https://github.com/hiveeyes" class="btn btn-outline-success btn-lg">GitHub</a>
+                <a href="https://hiveeyes.org/docs/system/LICENSE.html" class="btn btn-outline-success btn-lg">License</a>
+            </div>
+        </div>
     </li>
     <li class="container-fluid">
         <div class="row">
@@ -68,23 +96,25 @@
                 Documentation
             </div>
             <div class="col-xs-9 more-links">
-                <a href="https://hiveeyes.org/docs/system/" class="btn btn-outline-success btn-lg">Main system</a>
+                <a href="https://hiveeyes.org/docs/system/" class="btn btn-outline-success btn-lg">Project</a>
                 <a href="https://hiveeyes.org/docs/arduino/" class="btn btn-outline-success btn-lg">Arduino firmware</a>
                 <a href="https://hiveeyes.org/docs/beradio/" class="btn btn-outline-success btn-lg">BERadio protocol/gateway</a>
                 <a href="https://getkotori.org/" class="btn btn-outline-success btn-lg">Kotori backend</a>
+                <a href="https://getkotori.org/docs/applications/hiveeyes.html" class="btn btn-outline-success btn-lg">All together</a>
             </div>
         </div>
     </li>
-    <li>
-        <a href="https://swarm.hiveeyes.org/grafana/dashboard/db/hiveeyes-labs-wedding?from=20160416&to=20160601">Explore measurements</a>
-        <!-- TODO: Grafana -->
-        <!--
-        <a href="https://swarm.hiveeyes.org/grafana/">Explore measurements</a>
-        -->
+    <li class="container-fluid">
+        <div class="row">
+            <div class="col-xs-3 bullet-point">
+                Demo »LabHive One«
+            </div>
+            <div class="col-xs-9 more-links">
+                <a href="https://swarm.hiveeyes.org/grafana/dashboard/db/hiveeyes-labs-wedding?from=20160416&to=20160601" class="btn btn-outline-success btn-lg">Grafana dashboard</a>
+                <a href="https://hiveeyes.org/docs/system/labhive-one.html" class="btn btn-outline-success btn-lg">Curated events 2016</a>
+            </div>
+        </div>
     </li>
-
-    <!-- TODO: Gallery, Contact -->
-    <!-- TODO: Software (Download), Hardware, Firmware -->
 
 </ul>
 
@@ -119,25 +149,24 @@
                     With low-cost, low-power hardware, we aim at making non-invasive beekeeping as
                     affordable and comfortable as possible.
                     <br/>
-                    The backend systems do not require any 3rd-party services to work. While available as
-                    a hosted system running on our shared platform "swarm.hiveeyes.org",
-                    it also works self-contained even on a RaspberryPi or similar System-on-A-Chip computer.
+                    It is important to us that the core backend components do not depend on any 3rd-party services
+                    to work. While available as a hosted system running on our shared platform "swarm.hiveeyes.org",
+                    it also works self-contained even on a RaspberryPi or similar System-on-a-Chip computer.
                 </p>
 
                 <h3 class="text-muted">
                     How is it going?
                 </h3>
                 <p>
-                    After a while of planning and discussions in 2014 and reusing previous efforts of the founding
-                    team members, we finally entered the main designing and building phase in 2015/2016.
+                    The roots of this project reach back into 2011, where one of its founders started researching
+                    into the topic of low-cost beehive monitoring during the advent of the Arduino ecosystem,
+                    which offered an affordable, low-barrier entrypoint to MCU programming together with
+                    a growing, vibrant community.
                     <br/>
-                    We are now at a point where we nailed the components of the system and open sourced
-                    all major software artifacts required to run the whole stack, from embedded firmware
-                    to backend systems.
-                    The source code is on <a href="https://github.com/hiveeyes">GitHub</a>,
-                    so we are happy to share our efforts completely with the community and
-                    look forward to the next development iterations, now completely in the
-                    open.
+                    Early hardware and firmware prototypes were conceived in the upcoming years and finally
+                    the rest of us joined the project in 2014. After a while of planning, discussions
+                    and iterations over the efforts of the founding members, we finally reentered the
+                    main collaborative designing and building phase in 2015/2016.
 
                 </p>
 
@@ -145,17 +174,25 @@
                     And now?
                 </h3>
                 <p>
+                    We are now at the point where we nailed the components of the system and open sourced
+                    all major software artifacts required to run the whole stack, from embedded firmware
+                    to backend system components.
+                    The source code is on <a href="https://github.com/hiveeyes">GitHub</a>,
+                    so we are happy to share our efforts completely with the community and
+                    look forward to the next development iterations, now completely in the
+                    open.
+                    <br/><br/>
                     Beginning autumn 2016, we will reiterate on different aspects of the software-
                     and hardware-components, decide about which hardware route to follow and
-                    hopefully will start producing some small batches.
+                    hopefully will start producing some small batches next year.
                     <br/>
                     We will also put some efforts into a scientific project we were asked to
                     collaborate with and always look forward to your feedback. There are many
                     bits and pieces to look at and require more intensive testing.
                     <a href="mailto:hello@hiveeyes.org">We need you!</a>
                     <br/>
-                    For further details, please see the projects’
-                    <a href="https://hiveeyes.org/docs/system/goals.html">goals</a> and stay with us.
+                    If you are still reading, you might want to continue at the projects’
+                    <a href="https://hiveeyes.org/docs/system/goals.html">goals</a>.
                     <br/>
                     <br/>
                     Happy beekeeping!
@@ -163,6 +200,417 @@
                 </p>
 
                 -- The Hiveeyes Team.
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="tech-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="tech-modal-label" aria-hidden="true">
+    <div class="modal-dialog modal-x-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="tech-modal-label">Architecture, design and foundation</h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="card-deck-wrapper">
+                    <div class="card-deck">
+
+                        <div class="card">
+                            <div class="card-block">
+                                <h4 class="card-title">Design</h4>
+                                <h6 class="card-subtitle text-muted">Philosophy and non-functional attributes of the system</h6>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <h5 class="list-group-item-heading">Open source</h5>
+                                    <p class="list-group-item-text">Free software and hardware licenses like GNU GPL, AGPL and CERN OHL.</p>
+                                </li>
+                                <li class="list-group-item">
+                                    <h5 class="list-group-item-heading">Self-hosted</h5>
+                                    <p class="list-group-item-text">No vendor or on-demand-service lock-in effects.</p>
+                                </li>
+                                <li class="list-group-item">
+                                    <h5 class="list-group-item-heading">Multi-tenancy</h5>
+                                    <p class="list-group-item-text">Run it on your own or for communities of any size.</p>
+                                </li>
+                                <li class="list-group-item">
+                                    <h5 class="list-group-item-heading">Do it yourself</h5>
+                                    <p class="list-group-item-text">Feel free to customize and improve any part of the system.</p>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-block">
+                                <h4 class="card-title">Software</h4>
+                                <h6 class="card-subtitle text-muted">Contemporary, open source software components all over the place</h6>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <h5 class="list-group-item-heading">Kotori</h5>
+                                    <p class="list-group-item-text">A multi-channel, multi-protocol data acquisition and graphing toolkit.</p>
+                                </li>
+                                <li class="list-group-item">
+                                    <h5 class="list-group-item-heading">Mosquitto</h5>
+                                    <p class="list-group-item-text">A message broker that implements the MQTT protocol.</p>
+                                </li>
+                                <li class="list-group-item">
+                                    <h5 class="list-group-item-heading">InfluxDB</h5>
+                                    <p class="list-group-item-text">A time series database suitable for realtime analytics and sensor data storage.</p>
+                                </li>
+                                <li class="list-group-item">
+                                    <h5 class="list-group-item-heading">Grafana</h5>
+                                    <p class="list-group-item-text">A feature rich metrics dashboard and graph editor. Plays well with InfluxDB.</p>
+                                </li>
+                                <li class="list-group-item">
+                                    <h5 class="list-group-item-heading">mqttwarn</h5>
+                                    <p class="list-group-item-text">A powerful, pluggable notification system for MQTT.</p>
+                                </li>
+                            </ul>
+                        </div>
+
+
+
+                        <div class="card">
+                            <div class="card-block">
+                                <h4 class="card-title">Hardware</h4>
+                                <h6 class="card-subtitle text-muted">Low-cost, low-power hardware components</h6>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <h5 class="list-group-item-heading">Arduino</h5>
+                                    <p class="list-group-item-text">A popular do-it-yourself microcontroller computing platform based on Atmel AVR.</p>
+                                </li>
+                                <li class="list-group-item">
+                                    <h5 class="list-group-item-heading">Atmel/Microchip AVR</h5>
+                                    <p class="list-group-item-text">Low-power 8-bit RISC single-chip microcontrollers.</p>
+                                </li>
+                                <li class="list-group-item">
+                                    <h5 class="list-group-item-heading">HopeRF</h5>
+                                    <p class="list-group-item-text">RF transceiver modules for RF69 and RF95.</p>
+                                </li>
+                                <li class="list-group-item">
+                                    <h5 class="list-group-item-heading">GPRSbee</h5>
+                                    <p class="list-group-item-text">GPRS/GSM expansion board.</p>
+                                </li>
+                                <li class="list-group-item">
+                                    <h5 class="list-group-item-heading">Bosche H30A</h5>
+                                    <p class="list-group-item-text">Load cell module.</p>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-block">
+                                <h4 class="card-title">Technologies</h4>
+                                <h6 class="card-subtitle text-muted">Use the right tools for the job</h6>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <h5 class="list-group-item-heading">MQTT</h5>
+                                    <p class="list-group-item-text">A machine-to-machine (M2M, IoT) connectivity protocol and software bus.</p>
+                                </li>
+                                <li class="list-group-item">
+                                    <h5 class="list-group-item-heading">Twisted</h5>
+                                    <p class="list-group-item-text">A powerful, event-driven networking engine.</p>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="gallery-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gallery-modal-label" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="gallery-modal-label">Gallery of hardware and software components, diagrams and features</h4>
+            </div>
+            <div class="modal-body">
+
+                <div id="carousel-one" class="carousel slide" data-ride="carousel" data-interval="5000" data-pause="hover">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-one" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-one" data-slide-to="1"></li>
+                        <li data-target="#carousel-one" data-slide-to="2"></li>
+                        <li data-target="#carousel-one" data-slide-to="3"></li>
+                        <li data-target="#carousel-one" data-slide-to="4"></li>
+                        <li data-target="#carousel-one" data-slide-to="5"></li>
+                        <li data-target="#carousel-one" data-slide-to="6"></li>
+                        <li data-target="#carousel-one" data-slide-to="7"></li>
+                        <li data-target="#carousel-one" data-slide-to="8"></li>
+                        <li data-target="#carousel-one" data-slide-to="9"></li>
+                        <li data-target="#carousel-one" data-slide-to="10"></li>
+                        <li data-target="#carousel-one" data-slide-to="11"></li>
+                        <li data-target="#carousel-one" data-slide-to="12"></li>
+                        <li data-target="#carousel-one" data-slide-to="13"></li>
+                    </ol>
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                            <img src="https://ptrace.hiveeyes.org/2016-05-25_openhive-seeeduino-stalker-gprsbee.jpg" alt="Open Hive Seeeduino Stalker">
+                            <div class="carousel-caption">
+                                <h3>Open Hive Seeeduino Stalker</h3>
+                                <p>with GPRSBee module for GSM telemetry and custom connector shield.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://ptrace.hiveeyes.org/2016-07-08_open-hive_box-with-electronics.jpg" width="866" alt="Open Hive Box">
+                            <div class="carousel-caption">
+                                <h3>Open Hive Box</h3>
+                                <p>Open Hive Seeeduino Stalker, boxed.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://ptrace.hiveeyes.org/2016-06-17_openhive-beescale.jpg" alt="Open Hive Scale Parts">
+                            <div class="carousel-caption">
+                                <h3>Open Hive Scale Parts</h3>
+                                <p>Asymmetric-design hive scale with Bosche H30A load cell, unassembled.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://ptrace.hiveeyes.org/2016-06-17_openhive-beescale-assembled.jpg" alt="Open Hive Scale">
+                            <div class="carousel-caption">
+                                <h3>Open Hive Scale</h3>
+                                <p>Asymmetric-design hive scale with Bosche H30A load cell, assembled.</p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="https://ptrace.hiveeyes.org/2016-05-25_openhive-seeeduino-stalker-kit-top.jpg" alt="Open Hive Kit">
+                            <div class="carousel-caption">
+                                <h3>Open Hive Kit</h3>
+                                <p>
+                                    Solar-powered sensor node.
+                                    <br/>
+                                    GPRSbee module and custom connector shield.
+                                    <br/>
+                                    Asymmetric-design hive scale with Bosche H30A load cell.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="https://ptrace.hiveeyes.org/2016-05-25_openhive-temperature-array.jpg" alt="Open Hive Temperature Array">
+                            <div class="carousel-caption">
+                                <h3>Open Hive Temperature Array</h3>
+                                <p>
+                                    Temperature array for multi-point temperature measurements.
+                                    <br/>
+                                    Two different implementations: Left with PCB, right with ribbon cable.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="https://ptrace.hiveeyes.org/2016-05-25_Scale%20Frame%20-%2001%20-%20Beutenkarl.jpg" width="866" alt="Beutenkarl Scale Frame">
+                            <div class="carousel-caption">
+                                <h3>Beutenkarl Scale Frame</h3>
+                                <p>
+                                    Steel-made, symmetric-design scale frame
+                                    <br/>
+                                    with Bosche H30A load cell, assembled.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://ptrace.hiveeyes.org/2016-05-25_Scale%20Frame%20-%2005%20-%20Ready%2C%20Back.jpg" width="866" alt="Beutenkarl Scale Frame at LabHive One">
+                            <div class="carousel-caption">
+                                <h3>Beutenkarl Scale Frame</h3>
+                                <p>Scale frame at the »LabHive One« beehive, mounted.</p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="https://ptrace.hiveeyes.org/2016-09-03_Harvesting_2016-05.jpg" alt="Harvesting period April/May 2016">
+                            <div class="carousel-caption color-black">
+                                <h3>Harvesting</h3>
+                                <p>Harvesting period April/May 2016 recorded from »LabHive One« and displayed in Grafana.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://ptrace.hiveeyes.org/2016-09-03_Schwarmalarm_2016-05-20.jpg" alt="Schwarmalarm event on May 20, 2016">
+                            <div class="carousel-caption color-black">
+                                <h3>Schwarmalarm</h3>
+                                <p>A »Schwarmalarm« event on May 20, 2016 from »LabHive One«, displayed in Grafana.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://ptrace.hiveeyes.org/2016-09-03_Data-loss_event-notification_2016-07-08.jpg" alt="Data-loss event notification on July 8, 2016">
+                            <div class="carousel-caption color-black">
+                                <h3>Data-loss notification</h3>
+                                <p>
+                                    A data-loss event notification email was triggered by »mqttwarn«.
+                                    <br/>
+                                    The reason was connection-loss on the gateway machine.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="https://ptrace.hiveeyes.org/2016-07-07_Kotori%20Firmware%20Builder%20HttpRequester.jpg" alt="Firmware builder">
+                            <div class="carousel-caption color-black">
+                                <h3>Firmware builder</h3>
+                                <p>
+                                    Acquire firmware with flexible build- and configuration parameters without having a build chain installed.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="https://getkotori.org/docs/_images/graphviz-a1ae508b71701dc9729db6ff0792b5f420dd4d40.png" alt="Radio communication path">
+                            <br/><br/><br/><br/><br/>
+                            <br/><br/><br/><br/><br/>
+                            <div class="carousel-caption color-black">
+                                <h3>Radio communication</h3>
+                                <p>
+                                    RF69 and RF95 radio communication using BERadio protocol with Bencode serialization.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://getkotori.org/docs/_images/graphviz-1118b0c5030ac18df537e008df29c18e8034cc90.png" alt="WAN communication path">
+                            <br/><br/><br/><br/><br/>
+                            <br/><br/><br/><br/><br/>
+                            <div class="carousel-caption color-black">
+                                <h3>WAN communication</h3>
+                                <p>
+                                    MQTT- and HTTP-based data acquisition.
+                                    <br/>
+                                    InfluxDB storage and Grafana visualization.
+                                    <br/>
+                                    Event notifications through mqttwarn.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <a class="left carousel-control" href="#carousel-one" role="button" data-slide="prev">
+                        <span class="icon-prev" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-one" role="button" data-slide="next">
+                        <span class="icon-next" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <span class="pull-lg-left">
+                    Remark: Hovering over the image will pause the slideshow.
+                </span>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="press-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="press-modal-label" aria-hidden="true">
+    <div class="modal-dialog modal-x-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="press-modal-label">Hiveeyes in the press</h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="card-deck-wrapper">
+                    <div class="card-deck">
+
+                        <div class="card">
+                            <img class="card-img-top" width="100%" src="https://ptrace.hiveeyes.org/2016-09-04_IXDS%20Pre-Work%20Talk%20no.%207%20-%20Clemens%20Gruber.jpg" alt="Clemens talks about Open Hive">
+                            <div class="card-block">
+                                <h4 class="card-title">
+                                    IXDS Pre-Work Talk about “Bees”
+                                </h4>
+                                <p class="card-text">
+                                    Beekeeper Clemens Gruber shares how he gets insights from his beehive through
+                                    computer based monitoring in the “Open Hive” project.
+                                    Clemens starts talking at 26:00 minutes.
+                                </p>
+                                <p>
+                                    <a href="https://vimeo.com/69973637" target="_blank" class="btn btn-outline-secondary">Watch...</a>
+                                </p>
+                                <p class="card-text"><small class="text-muted">July 2013</small></p>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <img class="card-img-top" width="100%" src="https://ptrace.hiveeyes.org/2016-09-04_mauergarten-workshop-bees-on-electronics.jpg" alt="Workshop digitales Bienenmonitoring">
+                            <div class="card-block">
+                                <h4 class="card-title">
+                                    Workshop digitales Bienenmonitoring
+                                </h4>
+                                <p class="card-text">
+                                    Beekeeper Karsten Harazim encourages building a local community:
+                                    <br/><br/>
+                                    <span class="font-italic font-smaller">
+                                        liebe mauergärtner*innen, liebe imker, liebe nerds, liebe menschen.
+                                        <br/><br/>
+                                        wir möchten über den winter in einer workshopreihe mit ca 10-15 terminen,
+                                        ein funktionierendes monitoring für eines unserer bienenvölker im mauergarten
+                                        entwickeln und konstruieren. [...]
+                                    </span>
+                                </p>
+                                <p>
+                                    <a href="http://www.mauergarten.net/2014/09/5226/" target="_blank" class="btn btn-outline-secondary">Read more...</a>
+                                </p>
+                                <p class="card-text"><small class="text-muted">September 2014</small></p>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <img class="card-img-top" width="100%" src="https://ptrace.hiveeyes.org/2016-09-04_Open%20Hive%20Maker%20Faire%20Berlin%202015%20Donald%20Bell.jpg" alt="Open Hive at Maker Faire Berlin 2015">
+                            <div class="card-block">
+                                <h4 class="card-title">
+                                    Maker Faire Berlin 2015
+                                </h4>
+                                <p class="card-text">
+                                    Beekeeper Clemens Gruber was featured in the article »The Very First Maker Faire Berlin Doesn’t Miss a Beat« by Donald Bell.
+                                </p>
+                                <p>
+                                    <a href="http://makezine.com/2015/10/05/first-maker-faire-berlin-doesnt-miss-beat/" target="_blank" class="btn btn-outline-secondary">Enjoy...</a>
+                                </p>
+                                <p class="card-text"><small class="text-muted">October 2015</small></p>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <img class="card-img-top" width="100%" src="https://ptrace.hiveeyes.org/2016-07-10_ElRep149-Splash-Richard.jpg" alt="Richard Pobering talks about Hiveeyes">
+                            <div class="card-block">
+                                <h4 class="card-title">
+                                    Elektrischer Reporter 149: Vernetzte Bienen
+                                </h4>
+                                <p class="card-text">
+                                    Beekeeper Richard Pobering talks about the Hiveeyes project
+                                    in »Elektrischer Reporter 149: Vernetzte Bienen, Fahrradlobbyisten und Spielausgrabungen«.
+                                </p>
+                                <p>
+                                    <a href="http://www.elektrischer-reporter.de/phase3/video/390/" target="_blank" class="btn btn-outline-secondary">Enjoy...</a>
+                                </p>
+                                <p class="card-text"><small class="text-muted">May 2016</small></p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
 
             </div>
             <div class="modal-footer">
@@ -186,6 +634,8 @@
                 </h3>
                 <p>
                     Our primary internal and external way of communicating is email.
+                    <br/>
+                    We are happy to hear from you!
                     <br/><br/>
                     Please reach out to us at &nbsp; <a href="mailto:hello@hiveeyes.org?subject=Hello%20Hiveeyes" class="font-large">hello@hiveeyes.org</a>.
                 </p>
@@ -196,6 +646,10 @@
             </div>
         </div>
     </div>
+</div>
+
+<div class="footer text-muted font-x-small pull-lg-right">
+    © Copyright 2014-2016, The Hiveeyes Developers. CC-BY-SA 4.0. Last update: September 4, 2016.
 </div>
 
 <script src="./assets/js/jquery.min.js"></script>

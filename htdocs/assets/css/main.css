@@ -2,13 +2,16 @@ body {
     background-color: #eee;
     margin: 0;
     padding: 0;
+    /*
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    */
 }
 
 #main {
     display: flex;
     color: #fff;
-    background-color: #99d594;
+    background-color: #fff;
     justify-content: center;
     align-items: center;
     height: 320px;
@@ -39,11 +42,16 @@ body {
 }
 
 .slogan {
-    font-size: 1.9rem;
+    font-size: 1.2rem;
     display: flex;
     font-weight: 200;
-    line-height: 2.5rem;
+    line-height: 2.0rem;
 }
+
+.slogan-more {
+    margin-top: 1.0rem;
+}
+
 
 a, a:visited, a:active, .bullet-point, .more-links {
     color: #000 !important;
@@ -55,30 +63,31 @@ p > a, p > a:visited, p > a:active {
 }
 
 
-ul {
+ul.nav {
     margin: 0;
     padding: 0;
 }
 
-ul li a,.bullet-point,.more-links {
+ul.nav > li > a,.bullet-point,.more-links {
     padding: 15px 20px;
     display: block;
     font-weight: 300;
 }
 
-ul li {
+ul.nav > li {
     list-style: none;
     font-size: 2rem;
     color: #fff;
 }
 
-ul li:hover {
+ul.nav > li:hover {
     background-color: #ffd92f;
 }
 
-ul li:hover a {
+ul.nav > li:hover a {
     color: #111;
 }
+
 
 /* Colors made with http://colorbrewer2.org/ */
 
@@ -110,27 +119,27 @@ li:nth-child(6) {
 */
 
 /* green */
-li:first-child {
+ul.nav > li:first-child {
     background-color: #238443;
 }
 
-li:nth-child(2) {
+ul.nav > li:nth-child(2) {
     background-color: #41ab5d;
 }
 
-li:nth-child(3) {
+ul.nav > li:nth-child(3) {
     background-color: #78c679;
 }
 
-li:nth-child(4) {
+ul.nav > li:nth-child(4) {
     background-color: #addd8e;
 }
 
-li:nth-child(5) {
+ul.nav > li:nth-child(5) {
     background-color: #d9f0a3;
 }
 
-li:nth-child(6) {
+ul.nav > li:nth-child(6) {
     background-color: #ffffcc;
 }
 
@@ -144,7 +153,7 @@ li:nth-child(6) {
         width: 200px;
     }
 
-    li {
+    ul.nav > li {
         font-size: 1.8rem;
     }
 }
@@ -152,8 +161,16 @@ li:nth-child(6) {
 
 /* Custom CSS */
 
-.font-small {
+.font-smaller {
     font-size: smaller;
+}
+
+.font-small {
+    font-size: small;
+}
+
+.font-x-small {
+    font-size: x-small;
 }
 
 .font-large {
@@ -163,4 +180,12 @@ li:nth-child(6) {
 .inherit-spacing {
     margin: inherit;
     padding: inherit;
+}
+
+.color-black {
+    color: #000;
+}
+
+.modal-x-lg {
+    min-width: 95%;
 }
