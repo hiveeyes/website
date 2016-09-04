@@ -34,18 +34,17 @@
     - [o] Seed: http://www.mauergarten.net/2014/09/5226/
     - [o] Polish system docs
     - [o] Kick overlays again
-
+    - [o] Download packages, Build firmwares
     -->
 </head>
 <body>
-<div id="main">
+<div id="banner">
     <span id="logo"></span>
     <span id="title">
         <h1 class="headline">The Hiveeyes Project</h1>
         <h2 class="slogan">
             A flexible beehive monitoring infrastructure platform and toolkit
-            <br/>
-            based on modern software, affordable hardware and wireless telemetry.
+            based on affordable hardware, wireless telemetry and modern software.
         </h2>
         <div class="slogan-more">
             <a data-toggle="modal" data-target="#tech-modal" role="button" class="btn btn-outline-success">Read more...</a>
@@ -55,10 +54,10 @@
 <ul class="nav">
     <li class="container-fluid">
         <div class="row">
-            <div class="col-xs-3 bullet-point">
+            <div class="col-lg-3 bullet-point">
                 About
             </div>
-            <div class="col-xs-9 more-links">
+            <div class="col-lg-9 more-links">
                 <a data-toggle="modal" data-target="#intro-modal" role="button" class="btn btn-outline-success btn-lg">Introduction</a>
                 <a data-toggle="modal" data-target="#gallery-modal" role="button" class="btn btn-outline-success btn-lg">Gallery</a>
                 <a data-toggle="modal" data-target="#contact-modal" role="button" class="btn btn-outline-success btn-lg">Contact</a>
@@ -68,10 +67,10 @@
     </li>
     <li class="container-fluid">
         <div class="row">
-            <div class="col-xs-3 bullet-point">
+            <div class="col-lg-3 bullet-point">
                 Project
             </div>
-            <div class="col-xs-9 more-links">
+            <div class="col-lg-9 more-links">
                 <a href="https://trac.hiveeyes.org/blog" class="btn btn-outline-success btn-lg">Blog <span class="font-smaller">(German)</span></a>
                 <a href="https://hiveeyes.org/docs/system/history.html" class="btn btn-outline-success btn-lg">Chronicle</a>
                 <a data-toggle="modal" data-target="#press-modal" role="button" class="btn btn-outline-success btn-lg">In the press</a>
@@ -81,10 +80,10 @@
     </li>
     <li class="container-fluid">
         <div class="row">
-            <div class="col-xs-3 bullet-point">
+            <div class="col-lg-3 bullet-point">
                 Development
             </div>
-            <div class="col-xs-9 more-links">
+            <div class="col-lg-9 more-links">
                 <a href="https://github.com/hiveeyes" class="btn btn-outline-success btn-lg">GitHub</a>
                 <a href="https://hiveeyes.org/docs/system/LICENSE.html" class="btn btn-outline-success btn-lg">License</a>
             </div>
@@ -92,10 +91,10 @@
     </li>
     <li class="container-fluid">
         <div class="row">
-            <div class="col-xs-3 bullet-point">
+            <div class="col-lg-3 bullet-point">
                 Documentation
             </div>
-            <div class="col-xs-9 more-links">
+            <div class="col-lg-9 more-links">
                 <a href="https://hiveeyes.org/docs/system/" class="btn btn-outline-success btn-lg">Project</a>
                 <a href="https://hiveeyes.org/docs/arduino/" class="btn btn-outline-success btn-lg">Arduino firmware</a>
                 <a href="https://hiveeyes.org/docs/beradio/" class="btn btn-outline-success btn-lg">BERadio protocol/gateway</a>
@@ -106,10 +105,10 @@
     </li>
     <li class="container-fluid">
         <div class="row">
-            <div class="col-xs-3 bullet-point">
+            <div class="col-lg-3 bullet-point">
                 Demo »LabHive One«
             </div>
-            <div class="col-xs-9 more-links">
+            <div class="col-lg-9 more-links">
                 <a href="https://swarm.hiveeyes.org/grafana/dashboard/db/hiveeyes-labs-wedding?from=20160416&to=20160601" class="btn btn-outline-success btn-lg">Grafana dashboard</a>
                 <a href="https://hiveeyes.org/docs/system/labhive-one.html" class="btn btn-outline-success btn-lg">Curated events 2016</a>
             </div>
@@ -648,8 +647,9 @@
     </div>
 </div>
 
-<div class="footer text-muted font-x-small pull-lg-right">
-    © Copyright 2014-2016, The Hiveeyes Developers. CC-BY-SA 4.0. Last update: September 4, 2016.
+<div class="footer text-muted font-x-small pull-sm-right">
+    <div class="text-sm-right">© Copyright 2014-2016, The Hiveeyes Developers. CC-BY-SA 4.0. </div>
+    <div class="text-sm-right">Last update: September 4, 2016.</div>
 </div>
 
 <script src="./assets/js/jquery.min.js"></script>

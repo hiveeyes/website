@@ -1,20 +1,20 @@
+/* Tofino CSS, amended */
+
 body {
     background-color: #eee;
     margin: 0;
     padding: 0;
-    /*
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-    */
 }
 
-#main {
+#banner {
     display: flex;
     color: #fff;
     background-color: #fff;
     justify-content: center;
     align-items: center;
-    height: 320px;
+    min-height: 320px;
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
 
 #logo {
@@ -34,18 +34,19 @@ body {
 }
 
 .headline {
-    font-size: 3.3rem;
     display: flex;
-    line-height: 3.5rem;
+    font-size: 3.3rem;
     font-weight: 200;
+    line-height: 3.5rem;
     margin-bottom: 2.5rem;
 }
 
 .slogan {
-    font-size: 1.2rem;
     display: flex;
+    font-size: 1.2rem;
     font-weight: 200;
     line-height: 2.0rem;
+    max-width: 42rem;
 }
 
 .slogan-more {
@@ -68,94 +69,71 @@ ul.nav {
     padding: 0;
 }
 
-ul.nav > li > a,.bullet-point,.more-links {
+ul.nav li a {
+    margin-top: 0.1rem;
+    margin-bottom: 0.1rem;
+}
+
+ul.nav li > a,.bullet-point,.more-links {
     padding: 15px 20px;
     display: block;
     font-weight: 300;
 }
 
-ul.nav > li {
+ul.nav li {
     list-style: none;
-    font-size: 2rem;
+    font-size: 2.0rem;
     color: #fff;
 }
 
-ul.nav > li:hover {
+ul.nav li:hover {
     background-color: #ffd92f;
 }
 
-ul.nav > li:hover a {
+ul.nav li:hover a {
     color: #111;
 }
 
 
 /* Colors made with http://colorbrewer2.org/ */
-
-/* red */
-/*
-li:first-child {
-    background-color: #ffffb2;
-}
-
-li:nth-child(2) {
-    background-color: #fed976;
-}
-
-li:nth-child(3) {
-    background-color: #feb24c;
-}
-
-li:nth-child(4) {
-    background-color: #fd8d3c;
-}
-
-li:nth-child(5) {
-    background-color: #f03b20;
-}
-
-li:nth-child(6) {
-    background-color: #bd0026;
-}
-*/
-
-/* green */
-ul.nav > li:first-child {
+ul.nav li:first-child {
     background-color: #238443;
 }
 
-ul.nav > li:nth-child(2) {
+ul.nav li:nth-child(2) {
     background-color: #41ab5d;
 }
 
-ul.nav > li:nth-child(3) {
+ul.nav li:nth-child(3) {
     background-color: #78c679;
 }
 
-ul.nav > li:nth-child(4) {
+ul.nav li:nth-child(4) {
     background-color: #addd8e;
 }
 
-ul.nav > li:nth-child(5) {
+ul.nav li:nth-child(5) {
     background-color: #d9f0a3;
 }
 
-ul.nav > li:nth-child(6) {
+ul.nav li:nth-child(6) {
     background-color: #ffffcc;
 }
 
 @media (max-width: 555px) {
-    h1 {
-        height: 150px;
-        background-size: 180px;
-        font-size: 2.5rem;
-        line-height: 2.8rem;
-        padding-left: 170px;
-        width: 200px;
+
+    #logo {
+        display: none;
     }
 
-    ul.nav > li {
+    ul.nav li {
         font-size: 1.8rem;
     }
+
+    ul.nav li a {
+        font-size: 1.1rem;
+    }
+
 }
 
 

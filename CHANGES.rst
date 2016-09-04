@@ -6,6 +6,10 @@ Hiveeyes website CHANGES
 in progress
 ===========
 
+2016-09-04 0.3.1
+================
+- Improve layout responsiveness for smaller screen sizes. Slight CSS yak shaving.
+
 2016-09-04 0.3.0
 ================
 - Reduce footprint of header slogan
