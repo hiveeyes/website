@@ -6,6 +6,11 @@ Hiveeyes website CHANGES
 in progress
 ===========
 
+2016-09-14 0.3.2
+================
+- Shuffle some links around
+- Obfuscate email address
+
 2016-09-04 0.3.1
 ================
 - Improve layout responsiveness for smaller screen sizes. Slight CSS yak shaving.

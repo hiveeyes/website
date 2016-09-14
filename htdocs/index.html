@@ -24,17 +24,21 @@
     <script>
     </script>
     <!--
-    TODO:
-    Sections/content for
+
+    TODO I:
     - [x] About, Contact, Project, Goals
     - [x] Team, License, Gallery, In the press
-    - [o] At a glance / Overview, Other projects
-    - [o] Features (extended Gallery), Foundation, system components, mqttwarn & mcu contrib
+    - [o] At a glance / Overview
+    - [o] Update System and BERadio docs
+    - [o] Kick overlays again
+    - [o] Link to projects @ Slogan "Read more..."
+
+    TODO II:
+    - [o] Features (extended Gallery), Foundation, system components, mqttwarn & mcu contrib, Other projects
     - [o] DIY: BOM, Install, Software (Download), Hardware, Firmware
     - [o] Seed: http://www.mauergarten.net/2014/09/5226/
-    - [o] Polish system docs
-    - [o] Kick overlays again
     - [o] Download packages, Build firmwares
+
     -->
 </head>
 <body>
@@ -45,6 +49,7 @@
         <h2 class="slogan">
             A flexible beehive monitoring infrastructure platform and toolkit
             based on affordable hardware, wireless telemetry and modern software.
+            Open source and open hardware.
         </h2>
         <div class="slogan-more">
             <a data-toggle="modal" data-target="#tech-modal" role="button" class="btn btn-outline-success">Read more...</a>
@@ -58,7 +63,8 @@
                 About
             </div>
             <div class="col-lg-9 more-links">
-                <a data-toggle="modal" data-target="#intro-modal" role="button" class="btn btn-outline-success btn-lg">Introduction</a>
+                <a data-toggle="modal" data-target="#intro-modal" role="button" class="btn btn-outline-success btn-lg">Quick overview</a>
+                <a href="https://hiveeyes.org/docs/system/" class="btn btn-outline-success btn-lg">Project and system</a>
                 <a data-toggle="modal" data-target="#gallery-modal" role="button" class="btn btn-outline-success btn-lg">Gallery</a>
                 <a data-toggle="modal" data-target="#contact-modal" role="button" class="btn btn-outline-success btn-lg">Contact</a>
 
@@ -72,7 +78,7 @@
             </div>
             <div class="col-lg-9 more-links">
                 <a href="https://trac.hiveeyes.org/blog" class="btn btn-outline-success btn-lg">Blog <span class="font-smaller">(German)</span></a>
-                <a href="https://hiveeyes.org/docs/system/history.html" class="btn btn-outline-success btn-lg">Chronicle</a>
+                <a href="https://hiveeyes.org/docs/system/history.html" class="btn btn-outline-success btn-lg">News</a>
                 <a data-toggle="modal" data-target="#press-modal" role="button" class="btn btn-outline-success btn-lg">In the press</a>
                 <a href="https://hiveeyes.org/docs/system/people.html" class="btn btn-outline-success btn-lg">Team</a>
             </div>
@@ -95,7 +101,6 @@
                 Documentation
             </div>
             <div class="col-lg-9 more-links">
-                <a href="https://hiveeyes.org/docs/system/" class="btn btn-outline-success btn-lg">Project</a>
                 <a href="https://hiveeyes.org/docs/arduino/" class="btn btn-outline-success btn-lg">Arduino firmware</a>
                 <a href="https://hiveeyes.org/docs/beradio/" class="btn btn-outline-success btn-lg">BERadio protocol/gateway</a>
                 <a href="https://getkotori.org/" class="btn btn-outline-success btn-lg">Kotori backend</a>
@@ -111,6 +116,7 @@
             <div class="col-lg-9 more-links">
                 <a href="https://swarm.hiveeyes.org/grafana/dashboard/db/hiveeyes-labs-wedding?from=20160416&to=20160601" class="btn btn-outline-success btn-lg">Grafana dashboard</a>
                 <a href="https://hiveeyes.org/docs/system/labhive-one.html" class="btn btn-outline-success btn-lg">Curated events 2016</a>
+                <!-- TODO: Impressions from installation/setup -->
             </div>
         </div>
     </li>
@@ -135,7 +141,7 @@
                     collaborative telemetry platform for beehive monitoring.
                     We are Karsten, Robert, Clemens, Richard, Martin, Andreas and Dazz.
                     <br/>
-                    Feel welcome to <a href="mailto:hello@hiveeyes.org">join us</a>.
+                    Feel welcome to <a href="mailto:The%20Hiveeyes%20collective <hello[aet]hiveeyes.org>?subject=Hello%20Hiveeyes%20team&body=Please%20change%20the%20obfuscated%20email%20address%20above,%20thanks!">join us</a>.
                 </p>
 
                 <h3 class="text-muted">
@@ -188,7 +194,7 @@
                     We will also put some efforts into a scientific project we were asked to
                     collaborate with and always look forward to your feedback. There are many
                     bits and pieces to look at and require more intensive testing.
-                    <a href="mailto:hello@hiveeyes.org">We need you!</a>
+                    <a href="mailto:The%20Hiveeyes%20collective <hello[aet]hiveeyes.org>?subject=Hello%20Hiveeyes%20team&body=Please%20change%20the%20obfuscated%20email%20address%20above,%20thanks!">We need you!</a>
                     <br/>
                     If you are still reading, you might want to continue at the projects’
                     <a href="https://hiveeyes.org/docs/system/goals.html">goals</a>.
@@ -636,7 +642,7 @@
                     <br/>
                     We are happy to hear from you!
                     <br/><br/>
-                    Please reach out to us at &nbsp; <a href="mailto:hello@hiveeyes.org?subject=Hello%20Hiveeyes" class="font-large">hello@hiveeyes.org</a>.
+                    Please reach out to us at &nbsp; <a href="mailto:The%20Hiveeyes%20collective <hello[aet]hiveeyes.org>?subject=Hello%20Hiveeyes%20team&body=Please%20change%20the%20obfuscated%20email%20address%20above,%20thanks!" class="font-large">hello[aet]hiveeyes.org</a>.
                 </p>
 
             </div>
@@ -649,7 +655,7 @@
 
 <div class="footer text-muted font-x-small pull-sm-right">
     <div class="text-sm-right">© Copyright 2014-2016, The Hiveeyes Developers. CC-BY-SA 4.0. </div>
-    <div class="text-sm-right">Last update: September 4, 2016.</div>
+    <div class="text-sm-right">Last update: September 14, 2016. Version 0.3.2.</div>
 </div>
 
 <script src="./assets/js/jquery.min.js"></script>
