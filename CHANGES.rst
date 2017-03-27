@@ -6,6 +6,9 @@ Hiveeyes website CHANGES
 in progress
 ===========
 
+2017-03-27 0.3.3
+================
+- Add link to Forum (https://community.hiveeyes.org/)
 - Update links to videos and Grafana dashboard
 
 2016-09-14 0.3.2
