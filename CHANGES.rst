@@ -6,6 +6,8 @@ Hiveeyes website CHANGES
 in progress
 ===========
 
+- Update links to videos and Grafana dashboard
+
 2016-09-14 0.3.2
 ================
 - Shuffle some links around
