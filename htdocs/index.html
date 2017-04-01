@@ -2,25 +2,27 @@
 <!-- HTML and CSS foundation based on Project Tofino website (Mozilla), see https://mozilla.github.io/tofino/ -->
 <html>
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>The Hiveeyes Project</title>
-    <meta name='description' content='Beehive monitoring'>
+    <meta name="description" content="The Hiveeyes Project is developing a flexible beehive monitoring infrastructure platform and toolkit based on affordable hardware, wireless telemetry and modern software. Open source, open hardware and a friendly community.">
+    <meta name="keywords" content="beehive monitoring, beehive scale, schwarmalarm, open source, do it yourself, DIY, self-hosted, multi-tenancy, arduino, avr, esp8266, data acquisition, firmware, radio, wireless, mqtt, http, gprs, grafana, influxdb, mongodb, mosquitto, kotori, mqttwarn">
+    <meta name="author" content="The Hiveeyes Developers">
 
-    <meta property='og:title' content='The Hiveeyes Project'/>
-    <meta property='og:description' content='The Hiveeyes Project does wireless beehive monitoring.'/>
-    <meta property='og:type' content='website'/>
-    <meta property='og:url' content='https://www.hiveeyes.org/'/>
-    <meta property='og:image' content='https://www.hiveeyes.org/assets/img/hiveeyes.gif'/>
-    <meta property='og:site_name' content='The Hiveeyes Project'/>
+    <meta property="og:title" content="The Hiveeyes Project"/>
+    <meta property="og:description" content="The Hiveeyes Project is developing a flexible beehive monitoring infrastructure platform and toolkit based on affordable hardware, wireless telemetry and modern software. Open source, open hardware and a friendly community."/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://www.hiveeyes.org/"/>
+    <meta property="og:image" content="https://www.hiveeyes.org/assets/img/hiveeyes.gif"/>
+    <meta property="og:site_name" content="The Hiveeyes Project"/>
 
-    <meta content='#A5ECFD' name='theme-color'/>
-    <!-- <link rel='shortcut icon' href='./favicon.ico'/> -->
-    <link rel='stylesheet' href='./assets/css/bootstrap.min.css'>
-    <link rel='stylesheet' href='./assets/css/main.css'>
-    <link rel='canonical' href='https://www.hiveeyes.org/'>
+    <meta content="#A5ECFD" name="theme-color"/>
+    <!-- <link rel="shortcut icon" href="./favicon.ico"/> -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="canonical" href="https://www.hiveeyes.org/">
     <script>
     </script>
     <!--
@@ -28,15 +30,14 @@
     TODO I:
     - [x] About, Contact, Project, Goals
     - [x] Team, License, Gallery, In the press
+    - [x] Link to projects @ Slogan "Read more..."
     - [o] At a glance / Overview
     - [o] Update System and BERadio docs
     - [o] Kick overlays again
-    - [o] Link to projects @ Slogan "Read more..."
 
     TODO II:
     - [o] Features (extended Gallery), Foundation, system components, mqttwarn & mcu contrib, Other projects
     - [o] DIY: BOM, Install, Software (Download), Hardware, Firmware
-    - [o] Seed: http://www.mauergarten.net/2014/09/5226/
     - [o] Download packages, Build firmwares
 
     -->
@@ -47,13 +48,10 @@
     <span id="title">
         <h1 class="headline">The Hiveeyes Project</h1>
         <h2 class="slogan">
-            A flexible beehive monitoring infrastructure platform and toolkit
+            We are developing a flexible beehive monitoring infrastructure platform and toolkit
             based on affordable hardware, wireless telemetry and modern software.
-            Open source and open hardware.
+            Open source, open hardware and a friendly community.
         </h2>
-        <div class="slogan-more">
-            <a data-toggle="modal" data-target="#tech-modal" role="button" class="btn btn-outline-success">Read more...</a>
-        </div>
     </span>
 </div>
 <ul class="nav">
@@ -63,8 +61,8 @@
                 About
             </div>
             <div class="col-lg-9 more-links">
-                <a data-toggle="modal" data-target="#intro-modal" role="button" class="btn btn-outline-success btn-lg">Quick overview</a>
-                <a href="https://hiveeyes.org/docs/system/" class="btn btn-outline-success btn-lg">Project and system</a>
+                <a data-toggle="modal" data-target="#intro-modal" role="button" class="btn btn-outline-success btn-lg">Introduction</a>
+                <a data-toggle="modal" data-target="#tech-modal" role="button" class="btn btn-outline-success btn-lg">Technology</a>
                 <a data-toggle="modal" data-target="#gallery-modal" role="button" class="btn btn-outline-success btn-lg">Gallery</a>
                 <a data-toggle="modal" data-target="#contact-modal" role="button" class="btn btn-outline-success btn-lg">Contact</a>
 
@@ -77,11 +75,27 @@
                 Project
             </div>
             <div class="col-lg-9 more-links">
-                <a href="https://community.hiveeyes.org/" class="btn btn-outline-success btn-lg">Forum</span></a>
-                <a href="https://trac.hiveeyes.org/blog" class="btn btn-outline-success btn-lg">Blog <span class="font-smaller">(German)</span></a>
+                <a href="https://community.hiveeyes.org/c/announcements" class="btn btn-outline-success btn-lg">Announcements</a>
                 <a href="https://hiveeyes.org/docs/system/history.html" class="btn btn-outline-success btn-lg">News</a>
                 <a data-toggle="modal" data-target="#press-modal" role="button" class="btn btn-outline-success btn-lg">In the press</a>
                 <a href="https://hiveeyes.org/docs/system/people.html" class="btn btn-outline-success btn-lg">Team</a>
+            </div>
+        </div>
+    </li>
+    <li class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3 bullet-point">
+                Community
+            </div>
+            <div class="col-lg-9 more-links">
+                <a href="https://community.hiveeyes.org/" class="btn btn-outline-success btn-lg">Forum</span></a>
+                <a href="https://community.hiveeyes.org/c/community/welcome-on-board" class="btn btn-outline-success btn-lg">Welcome on board!</a>
+                <a href="https://swarm.hiveeyes.org/grafana/" class="btn btn-outline-success btn-lg">Platform</span></a>
+                <!--
+                <a href="https://swarm.hiveeyes.org/grafana/dashboard/db/berlin-wedding-1-official?from=20160416&to=20160601" class="btn btn-outline-success btn-lg">»LabHive One« Grafana dashboard (Demo)</a>
+                <a href="https://hiveeyes.org/docs/system/labhive-one.html" class="btn btn-outline-success btn-lg">Curated events 2016</a>
+                -->
+                <!-- TODO: Impressions from installation/setup -->
             </div>
         </div>
     </li>
@@ -93,6 +107,7 @@
             <div class="col-lg-9 more-links">
                 <a href="https://github.com/hiveeyes" class="btn btn-outline-success btn-lg">GitHub</a>
                 <a href="https://hiveeyes.org/docs/system/LICENSE.html" class="btn btn-outline-success btn-lg">License</a>
+                <a href="https://trac.hiveeyes.org/blog" class="btn btn-outline-success btn-lg">Blog <span class="font-smaller">(German)</span></a>
             </div>
         </div>
     </li>
@@ -102,22 +117,11 @@
                 Documentation
             </div>
             <div class="col-lg-9 more-links">
-                <a href="https://hiveeyes.org/docs/arduino/" class="btn btn-outline-success btn-lg">Arduino firmware</a>
-                <a href="https://hiveeyes.org/docs/beradio/" class="btn btn-outline-success btn-lg">BERadio protocol/gateway</a>
+                <a href="https://hiveeyes.org/docs/system/" class="btn btn-outline-success btn-lg">System</a>
+                <a href="https://hiveeyes.org/docs/arduino/" class="btn btn-outline-success btn-lg">Firmware</a>
+                <a href="https://hiveeyes.org/docs/beradio/" class="btn btn-outline-success btn-lg">BERadio telemetry</a>
                 <a href="https://getkotori.org/" class="btn btn-outline-success btn-lg">Kotori backend</a>
                 <a href="https://getkotori.org/docs/applications/hiveeyes.html" class="btn btn-outline-success btn-lg">All together</a>
-            </div>
-        </div>
-    </li>
-    <li class="container-fluid">
-        <div class="row">
-            <div class="col-lg-3 bullet-point">
-                Demo »LabHive One«
-            </div>
-            <div class="col-lg-9 more-links">
-                <a href="https://swarm.hiveeyes.org/grafana/dashboard/db/berlin-wedding-1-official?from=20160416&to=20160601" class="btn btn-outline-success btn-lg">Grafana dashboard</a>
-                <a href="https://hiveeyes.org/docs/system/labhive-one.html" class="btn btn-outline-success btn-lg">Curated events 2016</a>
-                <!-- TODO: Impressions from installation/setup -->
             </div>
         </div>
     </li>
@@ -234,20 +238,28 @@
                             </div>
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item">
-                                    <h5 class="list-group-item-heading">Open source</h5>
-                                    <p class="list-group-item-text">Free software and hardware licenses like GNU GPL, AGPL and CERN OHL.</p>
+                                    <a href="https://en.wikipedia.org/wiki/Open-source_software" target="_blank">
+                                        <h5 class="list-group-item-heading">Open source</h5>
+                                        <p class="list-group-item-text">Free software and hardware licenses like GNU GPL, AGPL and CERN OHL.</p>
+                                    </a>
                                 </li>
                                 <li class="list-group-item">
-                                    <h5 class="list-group-item-heading">Self-hosted</h5>
-                                    <p class="list-group-item-text">No vendor or on-demand-service lock-in effects.</p>
+                                    <a href="https://en.wikipedia.org/wiki/Self-hosting" target="_blank">
+                                        <h5 class="list-group-item-heading">Self-hosted</h5>
+                                        <p class="list-group-item-text">No vendor or on-demand-service lock-in effects.</p>
+                                    </a>
                                 </li>
                                 <li class="list-group-item">
-                                    <h5 class="list-group-item-heading">Multi-tenancy</h5>
-                                    <p class="list-group-item-text">Run it on your own or for communities of any size.</p>
+                                    <a href="https://en.wikipedia.org/wiki/Multitenancy" target="_blank">
+                                        <h5 class="list-group-item-heading">Multi-tenancy</h5>
+                                        <p class="list-group-item-text">Run it on your own or for communities of any size.</p>
+                                    </a>
                                 </li>
                                 <li class="list-group-item">
-                                    <h5 class="list-group-item-heading">Do it yourself</h5>
-                                    <p class="list-group-item-text">Feel free to customize and improve any part of the system.</p>
+                                    <a href="https://en.wikipedia.org/wiki/Do_it_yourself" target="_blank">
+                                        <h5 class="list-group-item-heading">Do it yourself</h5>
+                                        <p class="list-group-item-text">Feel free to customize and improve any part of the system.</p>
+                                    </a>
                                 </li>
                             </ul>
                         </div>
@@ -259,24 +271,40 @@
                             </div>
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item">
-                                    <h5 class="list-group-item-heading">Kotori</h5>
-                                    <p class="list-group-item-text">A multi-channel, multi-protocol data acquisition and graphing toolkit.</p>
+                                    <a href="https://getkotori.org" target="_blank">
+                                        <h5 class="list-group-item-heading">Kotori</h5>
+                                        <p class="list-group-item-text">A multi-channel, multi-protocol data acquisition and graphing toolkit.</p>
+                                    </a>
                                 </li>
                                 <li class="list-group-item">
-                                    <h5 class="list-group-item-heading">Eclipse Mosquitto</h5>
-                                    <p class="list-group-item-text">A message broker that implements the MQTT protocol.</p>
+                                    <a href="https://mosquitto.org/" target="_blank">
+                                        <h5 class="list-group-item-heading">Eclipse Mosquitto</h5>
+                                        <p class="list-group-item-text">A message broker that implements the MQTT protocol.</p>
+                                    </a>
                                 </li>
                                 <li class="list-group-item">
-                                    <h5 class="list-group-item-heading">InfluxDB</h5>
-                                    <p class="list-group-item-text">A time series database suitable for realtime analytics and sensor data storage.</p>
+                                    <a href="https://github.com/grafana/grafana" target="_blank">
+                                        <h5 class="list-group-item-heading">Grafana</h5>
+                                        <p class="list-group-item-text">A feature rich metrics dashboard and graph editor. Plays well with InfluxDB.</p>
+                                    </a>
                                 </li>
                                 <li class="list-group-item">
-                                    <h5 class="list-group-item-heading">Grafana</h5>
-                                    <p class="list-group-item-text">A feature rich metrics dashboard and graph editor. Plays well with InfluxDB.</p>
+                                    <a href="https://github.com/influxdata/influxdb" target="_blank">
+                                        <h5 class="list-group-item-heading">InfluxDB</h5>
+                                        <p class="list-group-item-text">A time series database suitable for realtime analytics and sensor data storage.</p>
+                                    </a>
                                 </li>
                                 <li class="list-group-item">
-                                    <h5 class="list-group-item-heading">mqttwarn</h5>
-                                    <p class="list-group-item-text">A powerful, pluggable notification system for MQTT.</p>
+                                    <a href="https://github.com/mongodb/mongo" target="_blank">
+                                        <h5 class="list-group-item-heading">MongoDB</h5>
+                                        <p class="list-group-item-text">A document database designed for ease of development and scaling.</p>
+                                    </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="https://github.com/jpmens/mqttwarn" target="_blank">
+                                        <h5 class="list-group-item-heading">mqttwarn</h5>
+                                        <p class="list-group-item-text">A powerful, pluggable notification system for MQTT.</p>
+                                    </a>
                                 </li>
                             </ul>
                         </div>
@@ -290,24 +318,40 @@
                             </div>
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item">
-                                    <h5 class="list-group-item-heading">Arduino</h5>
-                                    <p class="list-group-item-text">A popular do-it-yourself microcontroller computing platform based on Atmel AVR.</p>
+                                    <a href="https://www.arduino.cc" target="_blank">
+                                        <h5 class="list-group-item-heading">Arduino</h5>
+                                        <p class="list-group-item-text">A popular do-it-yourself microcontroller computing platform based on Atmel AVR.</p>
+                                    </a>
                                 </li>
                                 <li class="list-group-item">
-                                    <h5 class="list-group-item-heading">Atmel/Microchip AVR</h5>
-                                    <p class="list-group-item-text">Low-power 8-bit RISC single-chip microcontrollers.</p>
+                                    <a href="http://www.atmel.com/products/microcontrollers/avr/" target="_blank">
+                                        <h5 class="list-group-item-heading">Atmel/Microchip AVR</h5>
+                                        <p class="list-group-item-text">Low-power 8-bit RISC single-chip microcontrollers.</p>
+                                    </a>
                                 </li>
                                 <li class="list-group-item">
-                                    <h5 class="list-group-item-heading">HopeRF</h5>
-                                    <p class="list-group-item-text">RF transceiver modules for RF69 and RF95.</p>
+                                    <a href="http://www.espressif.com/en/products/hardware/esp8266ex/" target="_blank">
+                                        <h5 class="list-group-item-heading">Espressif ESP8266</h5>
+                                        <p class="list-group-item-text">Low-power, low-cost Wi-Fi chip with 32-bit Tensilica MCU and full TCP/IP stack.</p>
+                                    </a>
                                 </li>
                                 <li class="list-group-item">
-                                    <h5 class="list-group-item-heading">GPRSbee</h5>
-                                    <p class="list-group-item-text">GPRS/GSM expansion board.</p>
+                                    <a href="http://www.hoperf.com/rf_transceiver/" target="_blank">
+                                        <h5 class="list-group-item-heading">HopeRF</h5>
+                                        <p class="list-group-item-text">Sub-GHz RF transceiver modules RFM69 and RFM95.</p>
+                                    </a>
                                 </li>
                                 <li class="list-group-item">
-                                    <h5 class="list-group-item-heading">Bosche H30A</h5>
-                                    <p class="list-group-item-text">Load cell module.</p>
+                                    <a href="http://gprsbee.com/" target="_blank">
+                                        <h5 class="list-group-item-heading">GPRSbee</h5>
+                                        <p class="list-group-item-text">GPRS/GSM expansion board.</p>
+                                    </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="http://www.bosche.eu/en/products/load-cells/single-point-load-cell-h30a" target="_blank">
+                                        <h5 class="list-group-item-heading">Bosche H30A</h5>
+                                        <p class="list-group-item-text">Load cell module.</p>
+                                    </a>
                                 </li>
 
                             </ul>
@@ -320,12 +364,16 @@
                             </div>
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item">
-                                    <h5 class="list-group-item-heading">MQTT</h5>
-                                    <p class="list-group-item-text">A machine-to-machine (M2M, IoT) connectivity protocol and software bus.</p>
+                                    <a href="http://mqtt.org/" target="_blank">
+                                        <h5 class="list-group-item-heading">MQTT</h5>
+                                        <p class="list-group-item-text">A machine-to-machine (M2M, IoT) connectivity protocol and software bus.</p>
+                                    </a>
                                 </li>
                                 <li class="list-group-item">
-                                    <h5 class="list-group-item-heading">Twisted</h5>
-                                    <p class="list-group-item-text">A powerful, event-driven networking engine.</p>
+                                    <a href="https://github.com/twisted/twisted" target="_blank">
+                                        <h5 class="list-group-item-heading">Twisted</h5>
+                                        <p class="list-group-item-text">A powerful, event-driven networking engine.</p>
+                                    </a>
                                 </li>
                             </ul>
                         </div>
@@ -660,7 +708,7 @@
 
 <div class="footer text-muted font-x-small pull-sm-right">
     <div class="text-sm-right">© Copyright 2014-2017, The Hiveeyes Developers. CC-BY-SA 4.0. </div>
-    <div class="text-sm-right">Last update: March 14, 2017. Version 0.3.3.</div>
+    <div class="text-sm-right">Last update: March 31, 2017. Version 0.4.0.</div>
 </div>
 
 <script src="./assets/js/jquery.min.js"></script>

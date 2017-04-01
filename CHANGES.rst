@@ -6,6 +6,13 @@ Hiveeyes website CHANGES
 in progress
 ===========
 
+2017-03-31 0.4.0
+================
+- Update slogan
+- Restructure button wall
+- Add links to About » Technology
+- Add meta tags "description", "keywords" and "author"
+
 2017-03-27 0.3.3
 ================
 - Add link to Forum (https://community.hiveeyes.org/)
