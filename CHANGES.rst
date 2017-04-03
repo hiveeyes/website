@@ -6,6 +6,10 @@ Hiveeyes website CHANGES
 in progress
 ===========
 
+2017-04-03 0.4.1
+================
+- Add "Maker Faire Berlin 2016" to section "In the press"
+
 2017-03-31 0.4.0
 ================
 - Update slogan
