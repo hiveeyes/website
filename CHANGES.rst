@@ -6,6 +6,10 @@ Hiveeyes website CHANGES
 in progress
 ===========
 
+2017-04-16 0.4.2
+================
+- Fix broken links in gallery
+
 2017-04-03 0.4.1
 ================
 - Add "Maker Faire Berlin 2016" to section "In the press"
