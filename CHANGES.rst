@@ -6,6 +6,10 @@ Hiveeyes website CHANGES
 in progress
 ===========
 
+2018-04-03 0.5.0
+================
+- Add section about live data
+
 2017-04-16 0.4.2
 ================
 - Fix broken links in gallery
