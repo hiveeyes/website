@@ -5,6 +5,7 @@ Hiveeyes website CHANGES
 
 in progress
 ===========
+- Improve wording
 
 2018-04-03 0.5.0
 ================
