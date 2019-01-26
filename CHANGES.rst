@@ -6,6 +6,7 @@ Hiveeyes website CHANGES
 in progress
 ===========
 - Improve wording
+- Remove theme-color meta tag
 
 2018-04-03 0.5.0
 ================
