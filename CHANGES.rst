@@ -5,6 +5,13 @@ Hiveeyes website CHANGES
 
 in progress
 ===========
+
+2019-04-20 0.5.2
+================
+- Fix link to HopeRF
+
+2019-01-27 0.5.1
+================
 - Improve wording
 - Remove theme-color meta tag
 
