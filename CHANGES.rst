@@ -6,6 +6,10 @@ Hiveeyes website CHANGES
 in progress
 ===========
 
+2019-10-02 0.5.3
+================
+- Hide defunct link to former Blog
+
 2019-04-20 0.5.2
 ================
 - Fix link to HopeRF
