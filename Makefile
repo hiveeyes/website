@@ -1,2 +1,2 @@
 publish:
-	rsync -azuv -e "ssh -p 2707" htdocs/* root@www.hiveeyes.org:/var/www/hiveeyes.org/htdocs
+	rsync -azuv htdocs/* root@www.hiveeyes.org:/srv/www/organizations/hiveeyes/www.hiveeyes.org

@@ -5,6 +5,7 @@ Hiveeyes website CHANGES
 
 in progress
 ===========
+- Update publishing target
 
 2019-10-02 0.5.3
 ================
